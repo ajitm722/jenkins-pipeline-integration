@@ -36,7 +36,7 @@ pipeline {
 
         stage('Staging Integration Tests') {
             steps {
-                echo 'Verifying application in staging environment'
+                echo 'Verifying application in staging environment(testing trigger)'
             }
         }
 
