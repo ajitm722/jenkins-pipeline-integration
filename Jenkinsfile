@@ -1,18 +1,8 @@
 pipeline {
     agent any
 
-    triggers {
-        pollSCM('H/2 * * * *') // every 2 minutes
-    }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'git@github.com:ajitm722/jenkins-pipeline-integration.git',
-                    credentialsId: 'git-ssh'
-            }
-        }
 
         stage('Build') {
             steps {
